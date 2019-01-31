@@ -18,12 +18,22 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            ndk {
+//                abiFilters 'armeabi-v7a'
+//            }
         }
     }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-apply from: new File(rootProject.projectDir, "tools/gradle-on-demand.gradle");
+//apply from: new File(rootProject.projectDir, "tools/gradle-on-demand.gradle");
